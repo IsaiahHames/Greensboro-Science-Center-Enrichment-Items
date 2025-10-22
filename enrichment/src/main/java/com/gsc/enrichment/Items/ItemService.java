@@ -13,8 +13,8 @@ public class ItemService {
     }
 
     //Get item by ID
-    public Object getItemByID(Long id) {
-        return itemRepository.findById(id);
+    public Item getItemByID(Long id) {
+        return itemRepository.findById(id).orElse(null);
     }
 
     //Get item by name

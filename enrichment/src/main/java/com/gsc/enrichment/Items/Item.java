@@ -30,25 +30,29 @@ public class Item {
     @Column(nullable = false)
     private LocalDateTime lastCheckedOutAt;
 
+    private String imagePath;
+
     Item() {
 
     }
 
-    Item(String name, String lastLocation, boolean isAvailable, LocalDateTime lastCheckedInAt, LocalDateTime lastCheckedOutAt) {
+    Item(String name, String lastLocation, boolean isAvailable, LocalDateTime lastCheckedInAt, LocalDateTime lastCheckedOutAt, String imagePath) {
         this.name = name;
         this.lastLocation = lastLocation;
         this.isAvailable = isAvailable;
         this.lastCheckedInAt = lastCheckedInAt;
         this.lastCheckedOutAt = lastCheckedOutAt;
+        this.imagePath = imagePath;
     }
 
-    Item(Long id, String name, String lastLocation, boolean isAvailable, LocalDateTime lastCheckedInAt, LocalDateTime lastCheckedOutAt) {
+    Item(Long id, String name, String lastLocation, boolean isAvailable, LocalDateTime lastCheckedInAt, LocalDateTime lastCheckedOutAt, String imagePath) {
         this.id = id;
         this.name = name;
         this.lastLocation = lastLocation;
         this.isAvailable = isAvailable;
         this.lastCheckedInAt = lastCheckedInAt;
         this.lastCheckedOutAt = lastCheckedOutAt;
+        this.imagePath = imagePath;
     }
 
     public Long getId() {
@@ -77,7 +81,7 @@ public class Item {
     public boolean isAvailable() {
         return isAvailable;
     }
-    
+
     public boolean setAvailable(boolean isAvailable) {
         return this.isAvailable = isAvailable;
     }
@@ -98,6 +102,12 @@ public class Item {
         return this.lastCheckedOutAt = lastCheckedOutAt;
     }
 
+    public String getImagePath() {
+        return imagePath;
+    }
+    public String setImagePath(String imagePath) {
+        return this.imagePath = imagePath;
+    }
 
 
 
