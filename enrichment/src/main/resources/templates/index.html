@@ -33,8 +33,9 @@
 </head>
 <body>
     <header>
-        <img src="/enrichment/src/main/resources/static/images/gsclogo2.png" alt="">
+        <img src="/enrichment/src/main/resources/static/images/gsclogo2.png" alt="" id="logo">
         <h1>Enrichment Items</h1>
+        <a href="/enrichment/src/main/resources/templates/login.html">Admin Login</a>
     </header>
 
     <div>
@@ -43,6 +44,28 @@
         </form>
     </div>
 
-    <div id="cardstack"></div>
+    <div id="cardstack">
+        <div class="card">
+          <img src="/enrichment/src/main/resources/static/images/Items/Bongo.jpg" alt="" class="cardimg">
+          <h2>Bongo</h2>
+          <p>Last Checked In At:</p>
+          <p>Location :</p>
+          <p>Unavailiable <i class="fa-solid fa-circle-xmark"></i></p>
+        </div>
+        <div class="card">
+          <img src="/enrichment/src/main/resources/static/images/Items/Bear_rattle.jpg" alt="" class="cardimg">
+          <h2>Bear Rattle</h2>
+          <p>Last Checked Out At:</p>
+          <p>Location :</p>
+          <p>Availiable <i class="fa-solid fa-circle-check"></i></p>
+        </div>
+        <div class="card">
+          <img src="/enrichment/src/main/resources/static/images/Items/Antler.jpg" alt="" class="cardimg">
+          <h2>Antler</h2>
+          <p>Last Checked In At:</p>
+          <p>Location :</p>
+          <p>Unavailiable <i class="fa-solid fa-circle-xmark"></i></p>
+        </div>
+    </div>
 </body>
 </html>
