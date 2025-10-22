@@ -7,6 +7,10 @@ public class ItemService {
 
     private ItemRepository itemRepository;
 
+    public ItemService(ItemRepository itemRepository) {
+        this.itemRepository = itemRepository;
+    }
+
     //Get all items
     public Object getAllItems() {
         return itemRepository.findAll();

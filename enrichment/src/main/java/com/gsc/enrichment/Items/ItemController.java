@@ -19,6 +19,10 @@ public class ItemController {
 
     private ItemService service;
 
+    public ItemController(ItemService service) {
+        this.service = service;
+    }
+
     @GetMapping
     public String listItems(Model model) {
         model.addAttribute("items", service.getAllItems());
